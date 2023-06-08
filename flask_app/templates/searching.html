@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Become a Sitter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Pets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Search for Sitters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        <img src="profile-pic.jpg" alt="Profile Picture" width="30" height="30" class="rounded-circle">
+                    </a>
+                </li>
+            </ul>   
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Pet Form</h2>
+        <form action="/users/pet/create" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" class="form-control" name="breed" required>
+            </div>
+            <div class="form-group">
+                <label for="friendly_pets">Friendly with other pets:</label>
+                <select class="form-control" name="friendly_pets" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="friendly_children">Friendly with children:</label>
+                <select class="form-control" name="friendly_children" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feeding_time">Feeding time:</label>
+                <textarea class="form-control" name="feeding_time" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="special_requirement">Special requirements:</label>
+                <textarea class="form-control" name="special_requirement"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
